@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.signupDiv{
+    position: relative;
+    top: 25vh;
+    width:50vw;
+    margin: 0 auto;
+    background-color: rgba(228, 226, 226, 0.534);
+}
+.signupInputDiv{
+    display: flex;
+    width:50vw;
+    margin: 0 auto;
+    height:50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.signupDiv>h2{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* border-bottom: 3px solid white; */
+    font-size: 2rem;
+    text-transform: capitalize;
+    background-color: rgb(37, 177, 233);
+    padding: .3rem;
+}
+
+.signupInputs label{
+   font-size: 1.3rem;
+   color: rgb(102, 102, 102);
+   /* color: rgb(245, 171, 111); */
+}
+.signupInputs input{
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    padding-left:.2rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+
+}
+
+.signup-div-butn button{
+    color: white;
+    border: 2px solid white;
+    padding: 2px;
+    background-color: rgb(70, 151, 243);
+    font-size: 1.2rem;
+    width:10vw;
+}
+.userMsg{
+    color: rgb(255, 94, 0);
+    font-size: 1.1rem;
+    text-align: center;
+}
+@media only screen and (max-width:700px){
+    .signup-div-butn button{
+        width: 18vw;
+    }
+    .signupDiv{
+        width: 80vw;
+    }
+    .signupDiv>h2{
+        font-size: 1.5rem;
+    }
+}

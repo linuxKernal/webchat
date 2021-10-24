@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("D:\core project\my_websites\react-router-dom-project\src\images\theme.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.login{
+    position: relative;
+    top:30vh;
+    width:55vw;
+    margin: 0 auto;
+    display: flex;
+    /* background-color: silver; */
+    background:linear-gradient(0deg,#D9AFD9,#97D9E1);
+    border-radius: 1rem;
+
+
+}
+
+.login-image img{
+    width:26vw;
+    /* height:50vh; */
+}
+.login-image{
+    /* background:linear-gradient(0deg,#D9AFD9,#97D9E1); */
+    background-color: white;
+    border-radius: 1rem 0 0 1rem;
+    display: flex;
+    align-items: center;
+    /* width:30vw;  */
+    
+}
+.login-input{
+    width: 45vw;
+}
+
+.login-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: tomato; */
+    height:34vh;
+}
+.login-input>h2{
+    color: white;
+    background: l;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.login-1 label,.login input,.login-2 label{
+    font-size: 1.3rem;
+}
+.login-1 label,.login-2 label{
+    color: white;
+    line-height: 2.5rem;
+
+}
+.login-1 input ,.login-2 input{
+    width:20vw;
+    border-radius: .3rem;
+    border:none;
+    outline: none;
+    padding-left: .3rem;
+    padding:.2rem;
+}
+
+.login-butn button{
+    color: white;
+    background-color: rgb(62, 191, 241);
+    font-size: 1.3rem;
+    padding:.2rem;
+    width:10vw;
+    border-radius: .3rem;
+    border: 2px solid white
+}
+
+.login-input>hr{
+    background-color: white;
+    width: 55vw;
+    height:3px;
+    display: none;
+    margin-top: 1rem;
+
+}
+
+.login-info {
+    text-align: center;
+    
+}
+.login-info p{
+    padding-top: 1rem;
+    font-size: 1.1rem;
+}
+.login-info hr{
+    background-color: gray;
+    border: none;
+    height:.1rem;
+    width:30vw;
+    margin: 0 auto;
+}
+.login-info a{
+    color: rgba(255, 255, 255, 0.836);
+    letter-spacing: .1rem;
+}
+.login-info a:hover{
+    text-decoration: rgba(245, 241, 247, 0.993) underline;
+}
+
+@media only screen and (max-width:660px){
+    .login-image{
+        display: none;
+    }
+    .login-flex{
+        height:35vh;
+    }
+    .login-input>hr{
+        display: block;
+        border: none;
+    
+    }
+    .login-butn button{
+        width: 15vw;
+    }
+    .login-1 input ,.login-2 input{
+        width: 35vw;
+    }
+
+    .login-info p{
+        width:50vw;
+    }
+}
+
+.msg{
+    color: rgba(255, 0, 0, 0.822);
+    text-align: center;
+    font-size:1.1rem;
+    margin:3vh;
+}

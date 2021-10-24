@@ -1,0 +1,431 @@
+.masterDiv{
+    position: relative;
+    top:20vh;
+    height:75vh;
+    background-color:rgb(227, 227, 228);
+    display: flex;
+    width:70vw;
+    box-shadow: 2px 2px 30px 10px rgba(110, 109, 109, 0.678);
+    margin: 0 auto;
+
+}
+
+.userListDiv{
+    background-color: rgba(189, 189, 189, 0.774);
+    flex-grow: 1;
+    height:75vh;
+    overflow-y: auto;
+    min-width:18vw;
+    max-width:18vw;
+
+}
+.userDiv{
+    min-height:4.500rem;
+    max-height:10vh;
+    margin:.3rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: .2rem;
+    
+}
+.userDiv:hover{
+    background-color: rgba(255, 255, 255, 0.205);
+}
+.userDiv img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    margin-right:1rem;
+}
+.currentUser{
+    margin: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:14vh;
+    border: 2px solid transparent;
+    /* border-left: 5px solid white;
+    background-color: silver; */
+}
+.currentUser:hover{
+    /* background-color: rgba(255, 255, 255, 0.205); */
+    /* box-shadow: 1px 1px 3px 3px rgba(148, 147, 147, 0.678); */
+    border: 2px solid white;
+
+
+}
+.chatDiv{
+    flex-grow: 10;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.userHeader{
+    background-color: rgb(241, 239, 239);
+    display: flex;
+    max-height:10vh;
+    min-height:4.200rem;
+    align-items: center;
+    position: sticky;
+    top:0;
+}
+.userHeader img{
+    width:60px;
+    height: 60px;
+    border-radius:50%;
+    margin-left:.6rem;
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+}
+
+.indexTitle{
+    color: rgb(65, 66, 66);
+    font-size:1.5rem;
+    display: flex;
+    align-items: center;
+    margin-left:.6rem;
+}
+
+.currentUser img{
+    width:70px;
+    height: 70px;
+    border-radius:50%;
+    margin:.2rem;
+    
+}
+.searchDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height:20vh;
+    margin: .3rem;
+}
+#searchBox{
+    font-size:1.2rem;
+    /* border-radius:.3rem; */
+    border: none;
+    outline: none;
+    
+}
+.usernameDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.currentDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: royalblue; */
+}
+.currentDiv p:first-of-type{
+    color: white;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+.currentDiv p:nth-child(2){
+    color: white;
+}
+.ptag1{
+    color: white;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+.ptag2{
+    color: rgba(255, 255, 255, 0.664);
+    font-size: 1.1rem;
+}
+
+.timeDiv{
+    font-size: 1rem;
+    color: rgb(221, 219, 219);
+    flex-grow: 1;
+    text-align: right;
+}
+
+.startMsg{
+    text-align: center;
+    position: relative;
+    top:25vh;
+}
+
+.startMsg p:first-of-type{
+    color: rgb(11, 190, 101);
+    font-size: 2rem;
+}
+.startMsg p:nth-child(2){
+    color: gray;
+    font-size:1.1rem;
+}
+
+.massageDiv{
+    width:20vw;
+    margin:1rem;
+    max-height:10vh;
+    display: flex;
+    font-size: 1.1rem;
+    flex-grow: 4;
+
+}
+.massageDiv>p{
+    flex-grow: 1;
+    padding:.3rem;
+}
+.innerMsg{
+    color: gray;
+    font-size: 1rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.myside{
+    /* float: left; */
+    background-color: rgba(114, 170, 243, 0.801);
+    color: white;
+    margin-top: 1rem;
+    max-width:20vw;
+    /* margin-bottom: .5rem; */
+    display: inline-block;
+    padding-left:.5rem;
+    margin:.5rem;
+    border-radius: 1rem 1rem 1rem 0;
+    padding: .3rem;
+    /* background-clip: content-box; */
+
+}
+.myside h5,.otherside h5{
+    color: rgb(223, 223, 223);
+    font-size:.8rem;
+}
+.myside h3,.otherside h3{
+    padding: .3rem;
+    /* background-color: blueviolet; */
+}
+.myside h6,.otherside h6{
+    color:rgb(236, 246, 248);
+    /* width:18vw; */
+    font-size:.8rem;
+    text-align: right;
+}
+.otherside{
+    max-width:20vw;
+    background-color: rgba(8, 184, 102, 0.815);
+    display: inline-block;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .3rem;
+    padding-left:.5rem;
+    width:20vw;
+    border-radius:1rem 1rem 0 1rem;
+    margin:.5rem;
+    
+}
+
+
+
+
+.sideLine{
+    border-left:5px solid white;
+    background-color: rgba(230, 228, 228, 0.288);
+}
+.logOutButn{
+    flex-grow: 1;
+    /* background-color: cornflowerblue; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logOutButn button{
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgb(22, 238, 148);
+    border:3px solid white;
+    border-radius: .6rem;
+    padding: .3rem;
+    padding-left:.5rem;
+    padding-right: .5rem;
+    margin-right:5vw;
+}
+
+.logOutButn button:active{
+  border: 3px solid rgb(233, 232, 232);
+}
+.chatinput{
+    background-color: rgba(180, 176, 176, 0.781);
+    padding:.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    bottom:.01vh;
+    width:51vw;
+}
+.chatinput input:first-child{
+    font-size: 1.1rem;
+    height:2rem ;
+    width:35vw;
+    padding:.1rem;
+    border-radius:.5rem;
+    border:none;
+    outline: none;
+}
+
+.chatinput input:nth-child(2){
+    color: white;
+    background-color: rgb(6, 172, 6);
+    font-size: 1.1rem;
+    padding: .4rem 1.5rem .4rem 1.5rem;
+    border-radius: .6rem;
+    border:1px solid transparent;
+}
+
+.chatinput input:nth-child(2):active{
+    border:1px solid rgb(225, 236, 228);
+    background-color: rgba(6, 172, 6, 0.541);
+}
+
+.userInfo{
+    display: block;
+    position: fixed;
+    width:42vw;
+    height:27rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(70, 130, 241);
+    box-shadow: .1rem .1rem 10rem 30rem rgba(46, 45, 45, 0.377);
+    z-index:100;
+    
+    /* border:3px solid white; */
+}
+.userInfoTitle{
+    background-color: rgb(30, 210, 255);
+    color: white;
+    
+}
+.userInfoContent{
+    display: flex;
+    background-color: white;
+    max-width:37rem;
+    margin: 0 auto;
+}
+.profile{
+    margin:.2rem;
+    background-color: rgb(30, 255, 169);
+    padding: .3rem;
+    width:10vw;
+   
+}
+.profileDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:20vh;
+}
+.profile img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+.profile button{
+    background-color: green;
+    font-size:.9rem;
+    padding:.2rem;
+    color: white;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+    border: 2px solid white ;
+}
+.profile button:active{
+    border:2px solid transparent;
+}
+.userData{
+    background-color: rgb(216, 218, 219);
+    margin: .2rem;
+    width:30vw;
+    padding:.3rem;
+    display: flex;
+    flex-direction: column;
+}
+.save-butn{
+    color: white;
+    background-color: rgb(16, 194, 16);
+    font-size:1.1rem;
+    border: 2px solid white;
+    width:8vw;
+    margin: 0 20vw;
+    padding: .2rem 1rem .2rem 1rem;
+}
+.userField{
+    background-color: rgba(81, 206, 245, 0.795);
+    margin:.4rem;
+    /* display: inline-block; */
+    /* border-left:3px solid white; */
+    display: flex;
+    flex-direction: column;
+}
+.infoTemp{
+    background-color: rgb(30, 210, 255);
+    display: flex;
+    margin: .2rem;
+    padding: .3rem;
+}
+.infoTemp h2{
+    flex-grow: 8;
+
+}
+.infoTemp button{
+    flex-grow: 1;
+    /* background-color: transparent; */
+    border: none;
+    font-size:1.2rem;
+    background-color: rgb(245, 135, 116);
+    color: white;
+    border: 1px solid white;
+    padding:.2rem;
+}
+.infoTemp button:active{
+    border: 1px solid transparent;
+}
+.userField label{
+    color: rgb(252, 252, 252);
+    background-color: rgb(11, 145, 255);
+    font-size:1.3rem;
+    text-transform: capitalize;
+    padding-left:.2rem;
+}
+
+.inputBox{
+    background-color: rgb(140, 179, 211);
+    outline: none;
+    border: none;
+    color: rgb(236, 231, 231);
+    padding:.3rem;
+    font-size: 1rem;
+}
+
+
+.save-butn:active{
+    border: 2px solid transparent;
+    background-color:rgba(36, 226, 36, 0.76);
+}
+@media only screen and (max-width:990px){
+    .userDiv img{
+        display: none;
+    }
+    .userDiv{
+        flex-direction: column;
+    }
+    .currentDiv{
+        display: none;
+    }
+    .userHeader img{
+        display: none;
+    }
+}
+

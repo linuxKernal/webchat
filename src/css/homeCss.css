@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("D:\core project\my_websites\react-router-dom-project\src\images\theme.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.container-div{
+    position: relative;
+    top:30vh;
+    margin: 0 auto;
+    width:60vw;
+    background:linear-gradient(to left,#00DBDE,#FC00FF);
+    -webkit-background-clip: text;
+    padding: 1rem;
+}
+
+.div-title{
+    color: white;
+    text-transform: capitalize;
+    font-size: 3rem;
+    text-align: center;
+    color: transparent;
+}
+.div-p{
+    color: white;
+    text-align: center;
+    margin-top:5vh;
+    font-size:1.5rem;
+}
+
+.div-butn{
+    /* background-color: tomato; */
+    width:25vw;
+    margin: 0 auto;
+    margin-top:3vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.butn1,.butn2{
+    color: white;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    padding:.3rem;
+    width:10vw;
+    border: 3px solid white;
+    border-radius: .4rem;
+    
+}
+.butn1{
+    background-color: rgb(18, 228, 18);
+   
+}
+.butn2{
+    background-color: rgb(50, 168, 247);
+    
+}
+
+.container-div > h2{
+    letter-spacing: .5rem;
+}
+
+.image-div{
+    position: relative;
+    top:40vh;
+    background-color: rgba(233, 237, 238, 0.712);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding:1rem;
+    border-left:.5rem solid white;
+    /* border-right: .5rem solid white; */
+    width:90vw;
+    margin: 0 auto;
+}
+.imgDiv{
+    /* border: 1px solid white; */
+    background-color: rgb(112, 168, 252);
+    border-radius: 1rem;
+    width:20vw;
+   
+}
+.imgDiv img{
+    width: 10vw;
+    height: 20vh;
+    border-radius:8rem;
+}
+.theImage{
+    margin: 0 auto;
+    width:10vw;
+    margin-top:.3rem;
+    /* background-color: dodgerblue; */
+}
+.div-name{
+    color: white;
+    font-size:1.5rem;
+    font-weight: 500;
+    margin: 0 auto;
+    /* width:10vw; */
+    text-align: center;
+    /* font-style: italic; */
+}
+.div-post{
+    color: white;
+    font-style:oblique;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    /* width:10vw; */
+    text-align: center;
+    line-height:2rem;
+}
+.about-div{
+    color: rgb(226, 223, 223);
+    text-align: justify;
+    margin:.4rem;
+}
+.about-div::first-letter{
+    text-transform: capitalize;
+}
+@media only screen and (max-width:850px){
+    .butn1,.butn2{
+        width:20vw;
+    }
+    .container-div{
+        top:15vh;
+    }
+    .div-butn{
+        width:45vw;
+    }
+}
+
+
+
+@media only screen and (max-width:600px){
+    .imgDiv img{
+        height:10vh;
+        width:13vw;
+    }
+    .theImage{
+        width:13vw;
+    }
+}
+
+@media only screen and (min-width:650px) and (max-width:800px){
+    .imgDiv img{
+        height:17vh;
+        width:13vw;
+    }
+    .theImage{
+        width:13vw;
+    }
+}

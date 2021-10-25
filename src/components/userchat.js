@@ -3,16 +3,12 @@ import '../css/chatcss.css'
 import firebase from 'firebase'
 import {useHistory} from 'react-router-dom'
 import {Redirect} from 'react-router-dom'
-import pro1 from '../images/pro1.jpg'
+
 import pro2 from '../images/pro2.jpg'
 import pro3 from '../images/pro3.jpg'
 import { db } from '../config'
 function Chat() {
-    const [currentUser,setcurrentUser] = useState({
-        name:'ram',
-        profile:pro2,
-        about:"seinor developer"
-    })
+    const [currentUser,setcurrentUser] = useState({})
     const [isimg, setisimg] = useState(false)
     const [save_value, setsave_value] = useState("save")
     const img_url = useRef()
@@ -39,7 +35,6 @@ function Chat() {
                 lastseen:Time
             })
             window.onbeforeunload = null;
-            // return "hi google i am microsoft";
         }
         return ()=>{
             db.collection('users').doc(temp.username).update({
@@ -64,29 +59,7 @@ function Chat() {
         profile:pro3
     })
     
-    const [chatData, setchatData] = useState([
-        {
-            name: "krishna",
-            status : 'online',
-            profile: pro1,
-            lastseen: '10.23.12',
-            
-        },
-        {
-            name: "vijay",
-            status : 'offline',
-            profile: pro2,
-            lastseen: '10.34 am'
-            
-        },
-        {
-            name: "tamil",
-            status : 'offline',
-            profile: pro3,
-            lastseen: '12.10.2021'
-           
-        }
-    ])
+    const [chatData, setchatData] = useState([])
     const updateTeams = ()=>{
         const temp =[];
         db.collection('messages').get().then(item=>{
@@ -201,7 +174,7 @@ function Chat() {
                     if(element.name === currentUser.name){
                         list2= <Temp text={element.msg} class="myside" time={element.time.split('|')[1].replaceAll(':','. ')} key={Math.floor(Math.random()*1000)+100}  whichSide={{float:"left",width:"30vw"}} name="you" />
                     }else{
-                        list2= <Temp text={element.msg} class="otherside" time={element.time} key={Math.floor(Math.random()*100)}   whichSide={{float:"right",width:"30vw",display:"flex",justifyContent:"flex-end"}} name={currentMsg}/>
+                        list2= <Temp text={element.msg} class="otherside" time={element.time.split('|')[1].replaceAll(':','.')} key={Math.floor(Math.random()*100)}   whichSide={{float:"right",width:"30vw",display:"flex",justifyContent:"flex-end"}} name={currentMsg}/>
                     }
                     return list2
                 })
@@ -224,20 +197,19 @@ function Chat() {
     },[data])
     useEffect(()=>{
         console.log("set all users");
-     db.collection("users").get().then(info=>{
-         let dataCenter = [];
-         if(info){
-         info.forEach(item=>{
-             if(item.data().username!==currentUser.username && currentUser.username!== undefined){
-             dataCenter.push(item.data())
-             }
+        db.collection("users").get().then(info=>{
+        let dataCenter = [];
+        if(info){
+            info.forEach(item=>{
+            if(item.data().username!==currentUser.username && currentUser.username!== undefined){
+                dataCenter.push(item.data())
+            }
              
          })
          setchatData(dataCenter)
         }
      })   
     },[currentUser])
-    console.log("return");
     let isthere = false;
     const sendMsg = (e)=>{
         teams.forEach(item=>{

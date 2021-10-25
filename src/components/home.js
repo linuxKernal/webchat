@@ -3,8 +3,8 @@ import React, { useEffect,useState } from 'react'
 import SubContent from './subContent'
 import {db} from '../config'
 function Home() {
-    const [welcomeTitle, setwelcomeTitle] = useState("welcome to web chat");
-    const [subTitle, setsubTitle] = useState("chat the world make connection");
+    const [welcomeTitle, setwelcomeTitle] = useState();
+    const [subTitle, setsubTitle] = useState();
     const loginButn = (e)=>{
         let classname=e.target.className;
         if(classname==='butn1'){
@@ -20,8 +20,7 @@ function Home() {
            setwelcomeTitle(value1.welcomeTitle);
            setsubTitle(value1.subTitle);
        }).catch((error)=>{
-        setwelcomeTitle("welcome to web chat");
-        setsubTitle("chat the world make connection")
+        console.log("error found",error);
        })
         
     }, [])

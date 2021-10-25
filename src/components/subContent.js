@@ -1,30 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import {db} from '../config'
-import image1 from '../images/city.jpg'
-import image2 from '../images/theme.jpg'
-import image3 from '../images/winter.jpg'
+
 
 function SubContent() {
-    const [developersData, setdevelopersData] = useState([
-        {
-            name:'ram sakthi',
-            post:'admin',
-            imageUrl:image1,
-            about:"he was the best developerand he done more projectssuccessfully"
-        },
-        {
-            name:'vijay kumar',
-            post:'engineer',
-            imageUrl:image2,
-            about:"he was the best developerand he done more projectssuccessfully"
-        },
-        {
-            name:'sanker',
-            post:'database admin',
-            imageUrl:image3 ,
-            about:"he was the best developerand he done more projectssuccessfully"
-        }
-    ])
+    const [developersData, setdevelopersData] = useState([])
     useEffect(() => {
         db.collection('developers').get().then(data=>{
             let obj = [];
